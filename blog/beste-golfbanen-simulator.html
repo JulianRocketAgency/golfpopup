@@ -24,129 +24,144 @@
     "author": {"@type": "Organization", "name": "GolfPopup.nl"},
     "publisher": {"@type": "Organization", "name": "GolfPopup.nl", "url": "https://www.golfpopup.nl"},
     "url": "https://www.golfpopup.nl/blog/beste-golfbanen-simulator",
-    "image": "https://www.golfpopup.nl/og-image.jpg",
-    "mainEntityOfPage": "https://www.golfpopup.nl/blog/beste-golfbanen-simulator"
+    "image": "https://www.golfpopup.nl/og-image.jpg"
   }
   </script>
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%231a2e1a'/><text y='.9em' font-size='80' x='10'>⛳</text></svg>" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%231a2e1a'/><text y='.9em' font-size='80' x='10'>&#x26F3;</text></svg>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --green-deep:#1a2e1a;--green-accent:#4a7c4a;--gold:#c9a84c;--gold-light:#e8c87a;
-      --cream:#f5f0e8;--cream-dark:#ede5d3;--white:#ffffff;--text-mid:#4a4a4a;--text-light:#8a8a8a;
+      --green-deep: #1a2e1a;
+      --green-accent: #4a7c4a;
+      --gold: #c9a84c;
+      --gold-light: #e8c87a;
+      --cream: #f5f0e8;
+      --cream-dark: #ede5d3;
+      --white: #ffffff;
+      --text-mid: #4a4a4a;
+      --text-light: #8a8a8a;
     }
-    *{margin:0;padding:0;box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--green-deep)}
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Montserrat', sans-serif; background: var(--cream); color: var(--green-deep); }
+
     /* NAV */
-    nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;
-         padding:0 48px;height:72px;background:rgba(26,46,26,0.98);border-bottom:1px solid rgba(201,168,76,0.2)}
-    .nav-logo{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;color:var(--gold);text-decoration:none}
-    .nav-logo span{color:#fff;font-weight:300}
-    .nav-links{display:flex;gap:28px;list-style:none}
-    .nav-links a{color:rgba(255,255,255,0.75);text-decoration:none;font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;transition:color .2s}
-    .nav-links a:hover{color:var(--gold)}
-    .nav-cta{background:var(--gold);color:var(--green-deep)!important;padding:8px 20px;border-radius:2px;font-weight:700!important}
-    .nav-cta:hover{background:var(--gold-light)!important}
-    /* HERO */
-    .blog-hero{background:var(--green-deep);padding:64px 0 56px;position:relative;overflow:hidden}
-    .blog-hero::before{content:'';position:absolute;inset:0;
-      background:linear-gradient(160deg,rgba(10,20,10,0.7) 0%,rgba(15,25,15,0.5) 100%),
-      url('/hero-bg.jpg') center 30% / cover no-repeat}
-    .blog-hero-inner{position:relative;max-width:780px;margin:0 auto;padding:0 48px}
-    .blog-category{display:inline-block;font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;
-      color:var(--gold);margin-bottom:16px}
-    .blog-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,6vw,64px);font-weight:300;
-      color:#fff;line-height:1.1;margin-bottom:16px}
-    .blog-hero h1 em{font-style:italic;color:var(--gold)}
-    .blog-meta{font-size:12px;color:rgba(255,255,255,0.5);letter-spacing:1px}
-    /* CONTENT */
-    article{max-width:780px;margin:0 auto;padding:64px 48px 80px;background:var(--white)}
-    article h2{font-family:'Cormorant Garamond',serif;font-size:clamp(26px,4vw,36px);font-weight:400;
-      color:var(--green-deep);margin:40px 0 16px;line-height:1.2}
-    article h2 em{font-style:italic;color:var(--green-accent)}
-    article p{font-size:15px;line-height:1.9;color:var(--text-mid);margin-bottom:18px}
-    article ul{list-style:none;margin:16px 0 24px}
-    article ul li{font-size:14px;color:var(--text-mid);padding:8px 0;border-bottom:1px solid var(--cream-dark);
-      display:flex;align-items:center;gap:12px}
-    article ul li::before{content:'⛳';font-size:13px;flex-shrink:0}
-    .cta-box{margin-top:48px;padding:32px;background:var(--cream);border-left:3px solid var(--gold)}
-    .cta-box h3{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;color:var(--green-deep);margin-bottom:10px}
-    .cta-box p{font-size:14px;color:var(--text-mid);margin-bottom:0}
-    .btn-primary{display:inline-block;background:var(--gold);color:var(--green-deep);padding:14px 36px;
-      text-decoration:none;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
-      border-radius:2px;margin-top:16px;transition:background .2s}
-    .btn-primary:hover{background:var(--gold-light)}
-    .back-link{font-size:11px;color:var(--green-accent);text-decoration:none;font-weight:600;
-      letter-spacing:1px;display:inline-flex;align-items:center;gap:6px;margin-bottom:40px;
-      padding:10px 0;border-bottom:1px solid var(--cream-dark)}
-    .back-link:hover{color:var(--green-deep)}
-    /* FOOTER */
-    footer{background:#0f1f0f;padding:40px 48px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
-    .footer-logo{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--gold);text-decoration:none}
-    .footer-logo span{color:#fff;font-weight:300}
-    .footer-links{display:flex;gap:24px;list-style:none}
-    .footer-links a{color:rgba(255,255,255,0.4);text-decoration:none;font-size:11px;transition:color .2s}
-    .footer-links a:hover{color:var(--gold)}
-    .footer-copy{font-size:11px;color:rgba(255,255,255,0.25)}
-    @media(max-width:768px){
-      nav{padding:0 20px}.nav-links{display:none}
-      .blog-hero-inner{padding:0 24px}article{padding:40px 24px 60px}
-      footer{padding:32px 24px;flex-direction:column;align-items:flex-start}
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 48px; height: 72px;
+      background: rgba(26,46,26,0.98);
+      border-bottom: 1px solid rgba(201,168,76,0.2);
     }
-  </style>
+    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 600; color: var(--gold); text-decoration: none; }
+    .nav-logo span { color: #fff; font-weight: 300; }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 11px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; transition: color .2s; }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-cta { background: var(--gold) !important; color: var(--green-deep) !important; padding: 8px 20px; border-radius: 2px; font-weight: 700 !important; }
+    .nav-cta:hover { background: var(--gold-light) !important; }
+
+    /* HERO */
+    .blog-hero {
+      background: var(--green-deep);
+      padding: 72px 0 60px;
+      position: relative; overflow: hidden;
+    }
+    .blog-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        linear-gradient(160deg, rgba(10,20,10,0.80) 0%, rgba(15,25,15,0.65) 100%),
+        url('/hero-bg.jpg') center 30% / cover no-repeat;
+    }
+    .blog-hero-inner { position: relative; max-width: 780px; margin: 0 auto; padding: 0 48px; }
+    .blog-category { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+    .blog-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 6vw, 64px); font-weight: 300; color: #fff; line-height: 1.1; margin-bottom: 16px; }
+    .blog-hero h1 em { font-style: italic; color: var(--gold); }
+    .blog-meta { font-size: 12px; color: rgba(255,255,255,0.5); letter-spacing: 1px; }
+
+    /* ARTICLE */
+    article { max-width: 780px; margin: 0 auto; padding: 56px 48px 80px; background: var(--white); }
+    article h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(24px, 4vw, 34px); font-weight: 400; color: var(--green-deep); margin: 40px 0 14px; line-height: 1.2; }
+    article h2 em { font-style: italic; color: var(--green-accent); }
+    article p { font-size: 15px; line-height: 1.9; color: var(--text-mid); margin-bottom: 18px; }
+    article ul { list-style: none; margin: 8px 0 24px; }
+    article ul li { font-size: 14px; color: var(--text-mid); padding: 10px 0; border-bottom: 1px solid var(--cream-dark); display: flex; align-items: flex-start; gap: 12px; line-height: 1.6; }
+    article ul li::before { content: '⛳'; font-size: 13px; flex-shrink: 0; margin-top: 2px; }
+    .back-link { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; color: var(--green-accent); text-decoration: none; font-weight: 600; letter-spacing: 1px; margin-bottom: 40px; padding-bottom: 16px; border-bottom: 1px solid var(--cream-dark); width: 100%; }
+    .back-link:hover { color: var(--green-deep); }
+    .cta-box { margin-top: 56px; padding: 32px; background: var(--cream); border-left: 3px solid var(--gold); }
+    .cta-box h3 { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 600; color: var(--green-deep); margin-bottom: 10px; }
+    .cta-box p { font-size: 14px; color: var(--text-mid); }
+    .btn-primary { display: inline-block; background: var(--gold); color: var(--green-deep); padding: 14px 36px; text-decoration: none; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; border-radius: 2px; margin-top: 16px; transition: background .2s; }
+    .btn-primary:hover { background: var(--gold-light); }
+
+    /* FOOTER */
+    footer { background: #0f1f0f; padding: 40px 48px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+    .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; color: var(--gold); text-decoration: none; }
+    .footer-logo span { color: #fff; font-weight: 300; }
+    .footer-links { display: flex; gap: 24px; list-style: none; }
+    .footer-links a { color: rgba(255,255,255,0.4); text-decoration: none; font-size: 11px; transition: color .2s; }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-copy { font-size: 11px; color: rgba(255,255,255,0.25); }
+
+    @media (max-width: 768px) {
+      nav { padding: 0 20px; }
+      .nav-links li:not(:last-child) { display: none; }
+      .blog-hero-inner { padding: 0 24px; }
+      article { padding: 40px 24px 60px; }
+      footer { padding: 32px 24px; flex-direction: column; align-items: flex-start; }
+    }
+</style>
 </head>
 <body>
+
 <nav>
   <a href="/" class="nav-logo">Golf<span>Popup</span></a>
   <ul class="nav-links">
-    <li><a href="/#simulator">De Simulator</a></li>
-    <li><a href="/#occasions">Gelegenheden</a></li>
-    <li><a href="/#pricing">Tarieven</a></li>
+    <li><a href="/">Home</a></li>
     <li><a href="/blog/">Blog</a></li>
-    <li><a href="/#faq">FAQ</a></li>
     <li><a href="/#reservation" class="nav-cta">Offerte Aanvragen</a></li>
   </ul>
 </nav>
 
 <div class="blog-hero">
   <div class="blog-hero-inner">
-    <span class="blog-category">Banen & Locaties &nbsp;·&nbsp; 4 min leestijd</span>
+    <span class="blog-category">Banen & Locaties &nbsp;&middot;&nbsp; 4 min leestijd</span>
     <h1>De 5 mooiste golfbanen op <em>onze simulator</em></h1>
-    <div class="blog-meta">Gepubliceerd op 1 april 2025 &nbsp;·&nbsp; GolfPopup.nl</div>
+    <div class="blog-meta">Gepubliceerd op 1 april 2025 &nbsp;&middot;&nbsp; GolfPopup.nl</div>
   </div>
 </div>
 
 <article>
-  <a href="/blog/" class="back-link">← Terug naar alle artikelen</a>
+  <a href="/blog/" class="back-link">&#8592; Terug naar alle artikelen</a>
+
   
 <h2>Wereldberoemde banen, uw eigen locatie</h2>
-<p>Met de Garmin Approach R50 kunt u op meer dan 50 wereldberoemde golfbanen spelen — zonder vliegticket of green fee. Wij zetten onze vijf favorieten op een rij.</p>
+<p>Met de Garmin Approach R50 kunt u op meer dan 50 wereldberoemde golfbanen spelen &mdash; zonder vliegticket of green fee. Wij zetten onze vijf favorieten op een rij.</p>
 
-<h2>1. Augusta National — <em>Georgia, VS</em></h2>
-<p>De thuisbaan van The Masters is misschien wel de bekendste golfbaan ter wereld. De prachtige fairways, de azalea's en het iconische par-3 twaalfde hole — Augusta National is voor elke golfer een droom. Op onze simulator kunt u eindelijk zelf de Masters-ervaring beleven.</p>
+<h2>1. Augusta National &mdash; <em>Georgia, VS</em></h2>
+<p>De thuisbaan van The Masters is misschien wel de bekendste golfbaan ter wereld. De prachtige fairways, de azalea&rsquo;s en het iconische par-3 twaalfde hole &mdash; Augusta National is voor elke golfer een droom. Op onze simulator kunt u eindelijk zelf de Masters-ervaring beleven.</p>
 
-<h2>2. St Andrews Links — <em>Schotland</em></h2>
-<p>De "Home of Golf" is een verplicht nummertje voor iedere golfliefhebber. De Old Course met zijn karakteristieke bunkers en brede fairways biedt een unieke uitdaging die zowel beginners als gevorderde golfers aanspreekt.</p>
+<h2>2. St Andrews Links &mdash; <em>Schotland</em></h2>
+<p>De &ldquo;Home of Golf&rdquo; is een verplicht nummertje voor iedere golfliefhebber. De Old Course met zijn karakteristieke bunkers en brede fairways biedt een unieke uitdaging die zowel beginners als gevorderde golfers aanspreekt.</p>
 
-<h2>3. Pebble Beach — <em>Californië, VS</em></h2>
-<p>Gelegen aan de Stille Oceaan is Pebble Beach een van de mooiste golfbanen ter wereld. De smalle fairways langs de kliffen maken het tot een spannende uitdaging. Op de simulator kunt u genieten van het uitzicht zonder bang te hoeven zijn voor een bal in de oceaan.</p>
+<h2>3. Pebble Beach &mdash; <em>Californi&euml;, VS</em></h2>
+<p>Gelegen aan de Stille Oceaan is Pebble Beach een van de mooiste golfbanen ter wereld. De smalle fairways langs de kliffen maken het tot een spannende uitdaging. Op de simulator kunt u genieten van het uitzicht zonder bang te zijn voor een bal in de oceaan.</p>
 
-<h2>4. Valderrama — <em>Spanje</em></h2>
-<p>De meest prestigieuze golfbaan van continentaal Europa, gastheer van de Ryder Cup in 1997. Valderrama staat bekend om zijn smalle banen, oude kurkeiken en de verraderlijke watertrap op hole 17. Een echte test voor elke golfer.</p>
+<h2>4. Valderrama &mdash; <em>Spanje</em></h2>
+<p>De meest prestigieuze golfbaan van continentaal Europa, gastheer van de Ryder Cup in 1997. Valderrama staat bekend om zijn smalle banen, oude kurkeiken en de verraderlijke watertrap op hole 17.</p>
 
-<h2>5. Royal Melbourne — <em>Australië</em></h2>
-<p>Een van de mooiste linksbanen buiten de Britse eilanden, met zijn kenmerkende bunkers en windgevoelige lay-out. Royal Melbourne is voor velen een onbekende parel — en juist dat maakt hem zo leuk te ontdekken op de simulator.</p>
+<h2>5. Royal Melbourne &mdash; <em>Australi&euml;</em></h2>
+<p>Een van de mooiste linksbanen buiten de Britse eilanden, met zijn kenmerkende bunkers en windgevoelige lay-out. Royal Melbourne is voor velen een onbekende parel &mdash; en juist dat maakt hem zo leuk te ontdekken op de simulator.</p>
 
-<h2>Wilt u zelf op deze banen <em>spelen</em>?</h2>
-<p>Huur onze golfsimulator voor uw evenement en laat uw gasten kiezen uit meer dan 50 iconische banen. Geschikt voor beginners en gevorderde golfers — iedereen vindt zijn favoriete baan.</p>
 
   <div class="cta-box">
     <h3>Klaar om te reserveren?</h3>
-    <p>Vraag een vrijblijvende offerte aan en ontvang binnen 24 uur een reactie.</p>
-    <a href="/#reservation" class="btn-primary">Offerte Aanvragen →</a>
+    <p>Vraag een vrijblijvende offerte aan voor uw datum en ontvang binnen 24 uur een reactie.</p>
+    <a href="/" class="btn-primary">Offerte Aanvragen &rarr;</a>
   </div>
 </article>
 
@@ -155,10 +170,10 @@
   <ul class="footer-links">
     <li><a href="/">Home</a></li>
     <li><a href="/blog/">Blog</a></li>
-    <li><a href="/#faq">FAQ</a></li>
     <li><a href="mailto:info@golfpopup.nl">info@golfpopup.nl</a></li>
   </ul>
-  <span class="footer-copy">© 1 ap GolfPopup.nl</span>
+  <span class="footer-copy">© 2025 GolfPopup.nl</span>
 </footer>
+
 </body>
 </html>
