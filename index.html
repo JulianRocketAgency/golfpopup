@@ -2713,24 +2713,38 @@
     // Golfclub SVG — aanzicht van bovenaf, schuin kanteld
     const club = document.createElement('div');
     club.id = 'cursor-club';
-    club.innerHTML = `<svg width="48" height="48" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-      <!-- Shaft -->
-      <line x1="44" y1="3" x2="14" y2="38" stroke="#e8c87a" stroke-width="2" stroke-linecap="round"/>
-      <!-- Grip: wit/goud gestreept bovenin -->
-      <line x1="44" y1="3"  x2="41" y2="6"  stroke="#ffffff" stroke-width="3.5" stroke-linecap="round" opacity="0.95"/>
-      <line x1="41" y1="6"  x2="38" y2="9"  stroke="#c9a84c" stroke-width="3.5" stroke-linecap="round" opacity="0.9"/>
-      <line x1="38" y1="9"  x2="35" y2="12" stroke="#ffffff" stroke-width="3.5" stroke-linecap="round" opacity="0.9"/>
-      <line x1="35" y1="12" x2="32" y2="15" stroke="#c9a84c" stroke-width="3.5" stroke-linecap="round" opacity="0.8"/>
-      <!-- Club head: smal ijzer — dunne rechthoek langs de shaft -->
-      <rect x="0" y="0" width="14" height="4" rx="1.5"
-            fill="#c9a84c" stroke="#e8c87a" stroke-width="0.7"
-            transform="translate(8,37) rotate(-45)"/>
-      <!-- Hosel: verbinding shaft naar head -->
-      <line x1="14" y1="38" x2="11" y2="41" stroke="#c9a84c" stroke-width="2.5" stroke-linecap="round"/>
-      <!-- Face glint -->
-      <line x1="9" y1="38" x2="14" y2="43" stroke="rgba(255,255,255,0.4)" stroke-width="0.8" stroke-linecap="round"/>
+    club.innerHTML = `<svg width="56" height="56" viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg">
+      <!-- Shaft body -->
+      <line x1="50" y1="3" x2="18" y2="46" stroke="#b0b0b0" stroke-width="2.8" stroke-linecap="round"/>
+      <!-- Shaft highlight (left edge) -->
+      <line x1="49" y1="3" x2="17" y2="46" stroke="rgba(255,255,255,0.5)" stroke-width="1" stroke-linecap="round"/>
+
+      <!-- Grip (donker, bovenste 35% van shaft) -->
+      <line x1="50" y1="3" x2="38" y2="19" stroke="#3a2a2a" stroke-width="4.5" stroke-linecap="round"/>
+      <!-- Grip ribben -->
+      <line x1="48" y1="6"  x2="45" y2="6"  stroke="#5a3a3a" stroke-width="1.2" stroke-linecap="round" transform="rotate(-50 46 6)"/>
+      <line x1="46" y1="9"  x2="43" y2="9"  stroke="#5a3a3a" stroke-width="1.2" stroke-linecap="round" transform="rotate(-50 44 9)"/>
+      <line x1="44" y1="12" x2="41" y2="12" stroke="#5a3a3a" stroke-width="1.2" stroke-linecap="round" transform="rotate(-50 42 12)"/>
+      <line x1="42" y1="15" x2="39" y2="15" stroke="#5a3a3a" stroke-width="1.2" stroke-linecap="round" transform="rotate(-50 40 15)"/>
+      <line x1="40" y1="18" x2="37" y2="18" stroke="#5a3a3a" stroke-width="1.2" stroke-linecap="round" transform="rotate(-50 38 18)"/>
+
+      <!-- Hosel (verbinding shaft→head, iets dikker) -->
+      <line x1="18" y1="46" x2="14" y2="50" stroke="#888" stroke-width="3.5" stroke-linecap="round"/>
+
+      <!-- Club head body — brede iron kop -->
+      <path d="M5,53 L18,47 L20,51 L8,57 Z" fill="#2a2a2a" stroke="#111" stroke-width="0.8"/>
+      <!-- Club head face (lichtgrijs, lijnpatroon) -->
+      <path d="M6,53 L17,48 L19,51 L8,56 Z" fill="#c8c8c8" stroke="#999" stroke-width="0.5"/>
+      <!-- Face groeven -->
+      <line x1="8"  y1="54" x2="16" y2="50" stroke="#999" stroke-width="0.6" opacity="0.7"/>
+      <line x1="9"  y1="55" x2="17" y2="51" stroke="#999" stroke-width="0.6" opacity="0.7"/>
+      <line x1="10" y1="56" x2="18" y2="52" stroke="#999" stroke-width="0.6" opacity="0.7"/>
+      <!-- Sole (onderkant, donker) -->
+      <path d="M5,54 L8,57 L20,52 L18,50 Z" fill="#1a1a1a"/>
+      <!-- Glint op hosel -->
+      <circle cx="16" cy="48" r="1.2" fill="#aaaaaa" opacity="0.6"/>
     </svg>`;
-    club.style.cssText = 'transform:translate(-6px,-6px)';
+    club.style.cssText = 'transform:translate(-8px,-8px)';
     document.body.appendChild(club);
 
     // Trail ballen
