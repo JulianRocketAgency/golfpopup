@@ -2670,28 +2670,54 @@
   // ── FORM SUBMISSION ──
   document.getElementById('reservationForm').addEventListener('submit', async function(e) {
     e.preventDefault();
+
+    const btn = this.querySelector('.form-submit');
+    btn.textContent = 'Versturen...';
+    btn.disabled = true;
+
     const fd = new FormData(this);
     const data = Object.fromEntries(fd.entries());
 
-    // Build mailto
-    const body = encodeURIComponent(
-      `Nieuwe reserveringsaanvraag via GolfPopup.nl\n\n` +
-      `Naam: ${data.voornaam} ${data.achternaam}\n` +
-      `E-mail: ${data.email}\n` +
-      `Telefoon: ${data.telefoon || 'Niet opgegeven'}\n` +
-      `Datum: ${data.datum}\n` +
-      `Pakket: ${data.pakket}\n` +
-      `Evenement: ${data.evenement || 'Niet opgegeven'}\n` +
-      `Locatie: ${data.locatie || 'Niet opgegeven'}\n` +
-      `Opmerkingen: ${data.opmerkingen || 'Geen'}`
-    );
+    try {
+      // Formspree endpoint — vervang XXXXXXXX met uw eigen Formspree form-ID
+      // Maak gratis account aan op formspree.io en maak een form aan voor info@golfpopup.nl
+      // Zolang geen Formspree ID: fallback naar mailto
+      const FORMSPREE_ID = 'mvzdbdgj';
 
-    const mailtoLink = `mailto:info@golfpopup.nl?subject=${encodeURIComponent('Reserveringsaanvraag GolfPopup.nl - ' + data.voornaam + ' ' + data.achternaam)}&body=${body}`;
-    window.location.href = mailtoLink;
+      if (FORMSPREE_ID !== 'YOUR_FORM_ID') {
+        const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: fd
+        });
+        if (!res.ok) throw new Error('Formspree error');
+      } else {
+        // Fallback: open mailapp met alle gegevens vooringevuld
+        const body = encodeURIComponent(
+          `Nieuwe reserveringsaanvraag via GolfPopup.nl\n\n` +
+          `Naam: ${data.voornaam} ${data.achternaam}\n` +
+          `E-mail: ${data.email}\n` +
+          `Telefoon: ${data.telefoon || 'Niet opgegeven'}\n` +
+          `Datum: ${data.datum}\n` +
+          `Pakket: ${data.pakket}\n` +
+          `Evenement: ${data.evenement || 'Niet opgegeven'}\n` +
+          `Locatie: ${data.locatie || 'Niet opgegeven'}\n` +
+          `Opmerkingen: ${data.opmerkingen || 'Geen'}`
+        );
+        const subject = encodeURIComponent('Reserveringsaanvraag GolfPopup.nl - ' + data.voornaam + ' ' + data.achternaam);
+        // Opent mailapp in nieuw tabblad zodat de pagina blijft staan
+        window.open(`mailto:info@golfpopup.nl?subject=${subject}&body=${body}`, '_blank');
+      }
 
-    // Show success
-    document.getElementById('formCard').style.display = 'none';
-    document.getElementById('formSuccess').style.display = 'block';
+      // Toon succesmelding
+      document.getElementById('formCard').style.display = 'none';
+      document.getElementById('formSuccess').style.display = 'block';
+
+    } catch (err) {
+      btn.textContent = 'Aanvraag Versturen →';
+      btn.disabled = false;
+      alert('Er ging iets mis. Stuur uw aanvraag direct naar info@golfpopup.nl');
+    }
   });
 
   // ── SET MIN DATE ON FORM: vanaf 1 augustus ──
