@@ -1795,6 +1795,7 @@
                   <option value="hele-dag">Hele Dag – €650</option>
                   <option value="2-dagen">2 Dagen – €1.100</option>
                   <option value="week">Hele Week – €2.500</option>
+                  <option value="anders">Anders / Op maat</option>
                 </select>
               </div>
             </div>
@@ -2693,12 +2694,117 @@
     document.getElementById('formSuccess').style.display = 'block';
   });
 
-  // ── SET MIN DATE ON FORM ──
+  // ── SET MIN DATE ON FORM: vanaf 1 augustus ──
   const dateInput = document.querySelector('input[type="date"]');
   if (dateInput) {
-    const today = new Date().toISOString().split('T')[0];
-    dateInput.min = today;
+    dateInput.min = '2025-08-01';
+    dateInput.value = '';
   }
+
+  // ── POPUP: Weer boekbaar vanaf 1 augustus ──
+  (function() {
+    // Niet tonen als al gesloten in deze sessie
+    if (sessionStorage.getItem('popupClosed')) return;
+
+    const overlay = document.createElement('div');
+    overlay.id = 'booking-popup-overlay';
+    overlay.style.cssText = `
+      position: fixed; inset: 0;
+      background: rgba(10,20,10,0.75);
+      z-index: 99990;
+      display: flex; align-items: center; justify-content: center;
+      padding: 24px;
+      backdrop-filter: blur(4px);
+      animation: popupFadeIn 0.4s ease;
+    `;
+
+    overlay.innerHTML = `
+      <div style="
+        background: #1a2e1a;
+        border: 1px solid rgba(201,168,76,0.4);
+        max-width: 480px; width: 100%;
+        padding: 0;
+        position: relative;
+        animation: popupSlideUp 0.4s ease;
+        box-shadow: 0 32px 80px rgba(0,0,0,0.6);
+      ">
+        <!-- Gouden top-balk -->
+        <div style="background: var(--gold, #c9a84c); padding: 14px 24px; display:flex; align-items:center; gap:10px">
+          <span style="font-size:20px">⛳</span>
+          <span style="font-family:'Montserrat',sans-serif; font-size:10px; font-weight:800; letter-spacing:3px; text-transform:uppercase; color:#1a2e1a">Belangrijke mededeling</span>
+        </div>
+
+        <!-- Content -->
+        <div style="padding: 40px 40px 36px">
+          <div style="font-family:'Cormorant Garamond',serif; font-size:36px; font-weight:300; color:#ffffff; line-height:1.15; margin-bottom:16px">
+            Vanwege hoge animo<br><em style="color:#c9a84c; font-style:italic">weer boekbaar</em><br>vanaf 1 augustus
+          </div>
+          <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:rgba(255,255,255,0.6); line-height:1.8; margin-bottom:28px">
+            Door de overweldigende interesse is onze agenda tot en met juli volledig volgeboekt. Vanaf <strong style="color:rgba(255,255,255,0.9)">1 augustus 2025</strong> zijn er weer datums beschikbaar. U kunt alvast een reserveringsaanvraag indienen.
+          </p>
+
+          <!-- Datum badge -->
+          <div style="display:inline-flex; align-items:center; gap:12px; background:rgba(201,168,76,0.12); border:1px solid rgba(201,168,76,0.3); padding:12px 20px; margin-bottom:32px">
+            <span style="font-size:22px">📅</span>
+            <div>
+              <div style="font-family:'Montserrat',sans-serif; font-size:9px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:rgba(201,168,76,0.7); margin-bottom:2px">Eerste beschikbare datum</div>
+              <div style="font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:500; color:#c9a84c">1 augustus 2025</div>
+            </div>
+          </div>
+
+          <!-- Buttons -->
+          <div style="display:flex; gap:12px; flex-wrap:wrap">
+            <button onclick="document.getElementById('booking-popup-overlay').remove(); sessionStorage.setItem('popupClosed','1'); goToReservation();" style="
+              background: #c9a84c; color: #1a2e1a; border: none;
+              padding: 14px 28px; font-family:'Montserrat',sans-serif;
+              font-size:10px; font-weight:800; letter-spacing:2px; text-transform:uppercase;
+              cursor: none; flex:1; min-width:160px;
+              transition: background 0.2s;
+            " onmouseover="this.style.background='#e8c87a'" onmouseout="this.style.background='#c9a84c'">
+              Reserveer nu →
+            </button>
+            <button onclick="document.getElementById('booking-popup-overlay').remove(); sessionStorage.setItem('popupClosed','1');" style="
+              background: transparent; color: rgba(255,255,255,0.5);
+              border: 1px solid rgba(255,255,255,0.15);
+              padding: 14px 24px; font-family:'Montserrat',sans-serif;
+              font-size:10px; font-weight:600; letter-spacing:1.5px; text-transform:uppercase;
+              cursor: none;
+              transition: all 0.2s;
+            " onmouseover="this.style.borderColor='rgba(255,255,255,0.4)';this.style.color='rgba(255,255,255,0.8)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.15)';this.style.color='rgba(255,255,255,0.5)'">
+              Sluiten
+            </button>
+          </div>
+        </div>
+
+        <!-- Sluit-kruis -->
+        <button onclick="document.getElementById('booking-popup-overlay').remove(); sessionStorage.setItem('popupClosed','1');" style="
+          position:absolute; top:10px; right:14px;
+          background:none; border:none; color:rgba(255,255,255,0.4);
+          font-size:22px; cursor:none; line-height:1; padding:4px 8px;
+          transition: color 0.2s;
+        " onmouseover="this.style.color='#c9a84c'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">×</button>
+      </div>
+    `;
+
+    // Klik buiten popup sluit hem
+    overlay.addEventListener('click', (e) => {
+      if (e.target === overlay) {
+        overlay.remove();
+        sessionStorage.setItem('popupClosed', '1');
+      }
+    });
+
+    // CSS animaties
+    const style = document.createElement('style');
+    style.textContent = `
+      @keyframes popupFadeIn { from { opacity:0 } to { opacity:1 } }
+      @keyframes popupSlideUp { from { opacity:0; transform:translateY(24px) } to { opacity:1; transform:translateY(0) } }
+    `;
+    document.head.appendChild(style);
+
+    // Toon na 1.2s zodat pagina eerst laadt
+    setTimeout(() => document.body.appendChild(overlay), 1200);
+  })();
   // ── CUSTOM CURSOR: GOLFCLUB + ROLLENDE BAL ──
   (function() {
     if (window.matchMedia('(hover: none)').matches) return;
