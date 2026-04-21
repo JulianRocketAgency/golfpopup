@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.golfpopup.nl/sitemap.xml
+
+# Host
+Host: https://www.golfpopup.nl
