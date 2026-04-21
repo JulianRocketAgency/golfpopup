@@ -77,7 +77,7 @@
 
   <!-- Blog overzicht -->
   <url>
-    <loc>https://www.golfpopup.nl/blog</loc>
+    <loc>https://www.golfpopup.nl/blog/</loc>
     <lastmod>2025-04-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>

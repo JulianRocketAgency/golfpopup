@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog – Golftips, Nieuws & Inspiratie | GolfPopup.nl</title>
+  <meta name="description" content="Lees de laatste artikelen over golfsimulators huren, evenementen, teambuilding en de beste golfbanen. Blog van GolfPopup.nl." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.golfpopup.nl/blog/" />
+  <meta property="og:title" content="Blog – GolfPopup.nl" />
+  <meta property="og:description" content="Tips, inspiratie en nieuws over golfsimulators en evenementen." />
+  <meta property="og:url" content="https://www.golfpopup.nl/blog/" />
+  <meta property="og:image" content="https://www.golfpopup.nl/og-image.jpg" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%231a2e1a'/><text y='.9em' font-size='80' x='10'>⛳</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --green-deep:#1a2e1a;--green-mid:#2d4a2d;--green-accent:#4a7c4a;
+      --gold:#c9a84c;--gold-light:#e8c87a;--cream:#f5f0e8;--cream-dark:#ede5d3;
+      --white:#ffffff;--text-mid:#4a4a4a;--text-light:#8a8a8a;
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Montserrat',sans-serif;background:var(--cream);color:var(--green-deep)}
+    nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;
+        padding:0 48px;height:72px;background:rgba(26,46,26,0.98);border-bottom:1px solid rgba(201,168,76,0.2)}
+    .nav-logo{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:600;color:var(--gold);text-decoration:none}
+    .nav-logo span{color:#fff;font-weight:300}
+    .nav-links{display:flex;gap:28px;list-style:none}
+    .nav-links a{color:rgba(255,255,255,0.75);text-decoration:none;font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;transition:color .2s}
+    .nav-links a:hover,.nav-links a.active{color:var(--gold)}
+    .nav-cta{background:var(--gold);color:var(--green-deep)!important;padding:8px 20px;border-radius:2px;font-weight:700!important}
+    .nav-cta:hover{background:var(--gold-light)!important}
+
+    .blog-hero{background:var(--green-deep);padding:72px 0 60px;position:relative;overflow:hidden;text-align:center}
+    .blog-hero::before{content:'';position:absolute;inset:0;
+      background:linear-gradient(160deg,rgba(10,20,10,0.75) 0%,rgba(15,25,15,0.6) 100%),
+      url('../hero-bg.jpg') center 20% / cover no-repeat}
+    .blog-hero-inner{position:relative;max-width:700px;margin:0 auto;padding:0 24px}
+    .eyebrow{font-size:10px;font-weight:700;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;display:block}
+    .blog-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(42px,7vw,72px);font-weight:300;color:#fff;line-height:1.1}
+    .blog-hero h1 em{font-style:italic;color:var(--gold)}
+    .blog-hero p{font-size:14px;color:rgba(255,255,255,0.55);margin-top:16px;line-height:1.7}
+
+    .blog-grid{max-width:1160px;margin:0 auto;padding:72px 48px 80px;display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+
+    .blog-card{background:var(--white);text-decoration:none;display:block;border:1px solid var(--cream-dark);transition:all .3s ease}
+    .blog-card:hover{transform:translateY(-4px);box-shadow:0 16px 48px rgba(26,46,26,0.1);border-color:var(--green-accent)}
+    .blog-card-thumb{height:180px;display:flex;align-items:center;justify-content:center;font-size:52px}
+    .blog-card-body{padding:24px}
+    .blog-card-cat{font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--green-accent);margin-bottom:10px;display:block}
+    .blog-card-title{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:600;color:var(--green-deep);line-height:1.3;margin-bottom:10px}
+    .blog-card-desc{font-size:12px;color:var(--text-light);line-height:1.6;margin-bottom:16px}
+    .blog-card-meta{font-size:10px;color:var(--text-light);display:flex;justify-content:space-between;align-items:center}
+    .blog-card-link{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--green-accent)}
+
+    footer{background:#0f1f0f;padding:40px 48px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+    .footer-logo{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--gold);text-decoration:none}
+    .footer-logo span{color:#fff;font-weight:300}
+    .footer-links{display:flex;gap:24px;list-style:none}
+    .footer-links a{color:rgba(255,255,255,0.4);text-decoration:none;font-size:11px;transition:color .2s}
+    .footer-links a:hover{color:var(--gold)}
+    .footer-copy{font-size:11px;color:rgba(255,255,255,0.25)}
+
+    @media(max-width:900px){.blog-grid{grid-template-columns:1fr 1fr;padding:48px 24px}}
+    @media(max-width:600px){.blog-grid{grid-template-columns:1fr}.nav-links{display:none}nav{padding:0 20px}}
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">Golf<span>Popup</span></a>
+  <ul class="nav-links">
+    <li><a href="/#simulator">De Simulator</a></li>
+    <li><a href="/#occasions">Gelegenheden</a></li>
+    <li><a href="/#pricing">Tarieven</a></li>
+    <li><a href="/blog/" class="active">Blog</a></li>
+    <li><a href="/#faq">FAQ</a></li>
+    <li><a href="/#reservation" class="nav-cta">Offerte Aanvragen</a></li>
+  </ul>
+</nav>
+
+<div class="blog-hero">
+  <div class="blog-hero-inner">
+    <span class="eyebrow">GolfPopup Blog</span>
+    <h1>Tips, inspiratie &<br /><em>golfnieuws</em></h1>
+    <p>Alles over golfsimulators huren, evenementen en de mooiste golfbanen ter wereld.</p>
+  </div>
+</div>
+
+<div class="blog-grid">
+
+  <a href="/blog/golfsimulator-thuis-huren" class="blog-card">
+    <div class="blog-card-thumb" style="background:#1a2e1a">⛳</div>
+    <div class="blog-card-body">
+      <span class="blog-card-cat">Tips & Tricks</span>
+      <div class="blog-card-title">Golfsimulator thuis huren – dit moet u weten</div>
+      <div class="blog-card-desc">Kosten, benodigde ruimte en waarom huren veel slimmer is dan kopen.</div>
+      <div class="blog-card-meta">
+        <span>10 april 2025 · 5 min</span>
+        <span class="blog-card-link">Lees meer →</span>
+      </div>
+    </div>
+  </a>
+
+  <a href="/blog/beste-golfbanen-simulator" class="blog-card">
+    <div class="blog-card-thumb" style="background:#2d4a2d">🌍</div>
+    <div class="blog-card-body">
+      <span class="blog-card-cat">Banen & Locaties</span>
+      <div class="blog-card-title">De 5 mooiste golfbanen op onze simulator</div>
+      <div class="blog-card-desc">Van Augusta National tot Royal Melbourne — de must-plays op de Garmin R50.</div>
+      <div class="blog-card-meta">
+        <span>1 april 2025 · 4 min</span>
+        <span class="blog-card-link">Lees meer →</span>
+      </div>
+    </div>
+  </a>
+
+  <a href="/blog/golf-teambuilding" class="blog-card">
+    <div class="blog-card-thumb" style="background:#1f3a1f">🏢</div>
+    <div class="blog-card-body">
+      <span class="blog-card-cat">Bedrijfsevenementen</span>
+      <div class="blog-card-title">Waarom golf het perfecte teambuilding-activiteit is</div>
+      <div class="blog-card-desc">Laagdrempelig, competitief en voor iedereen leuk — ook zonder golfervaring.</div>
+      <div class="blog-card-meta">
+        <span>22 maart 2025 · 6 min</span>
+        <span class="blog-card-link">Lees meer →</span>
+      </div>
+    </div>
+  </a>
+
+  <a href="/blog/golfsimulator-bruiloft" class="blog-card">
+    <div class="blog-card-thumb" style="background:#1a2e1a">💍</div>
+    <div class="blog-card-body">
+      <span class="blog-card-cat">Bruiloften</span>
+      <div class="blog-card-title">Golfsimulator op uw bruiloft: een origineel idee</div>
+      <div class="blog-card-desc">Uniek entertainment voor alle leeftijden op uw huwelijksreceptie.</div>
+      <div class="blog-card-meta">
+        <span>14 maart 2025 · 5 min</span>
+        <span class="blog-card-link">Lees meer →</span>
+      </div>
+    </div>
+  </a>
+
+  <a href="/blog/garmin-approach-r50-review" class="blog-card">
+    <div class="blog-card-thumb" style="background:#2d4a2d">📡</div>
+    <div class="blog-card-body">
+      <span class="blog-card-cat">Technologie</span>
+      <div class="blog-card-title">Garmin Approach R50 review: nauwkeurig én toegankelijk</div>
+      <div class="blog-card-desc">Specs, banen en gebruiksgemak — waarom dit de beste keuze is voor evenementen.</div>
+      <div class="blog-card-meta">
+        <span>5 maart 2025 · 7 min</span>
+        <span class="blog-card-link">Lees meer →</span>
+      </div>
+    </div>
+  </a>
+
+</div>
+
+<footer>
+  <a href="/" class="footer-logo">Golf<span>Popup</span></a>
+  <ul class="footer-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="/#faq">FAQ</a></li>
+    <li><a href="mailto:info@golfpopup.nl">info@golfpopup.nl</a></li>
+  </ul>
+  <span class="footer-copy">© 2025 GolfPopup.nl</span>
+</footer>
+
+</body>
+</html>
