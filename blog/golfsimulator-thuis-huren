@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Golfsimulator Thuis Huren – Kosten, Tips & Voordelen | GolfPopup.nl</title>
+  <meta name="description" content="Overweegt u een golfsimulator thuis of voor een feestje? Lees alles over kosten, benodigde ruimte en waarom huren veel slimmer is dan kopen." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.golfpopup.nl/blog/golfsimulator-thuis-huren" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Golfsimulator Thuis Huren – Kosten, Tips & Voordelen | GolfPopup.nl" />
+  <meta property="og:description" content="Overweegt u een golfsimulator thuis of voor een feestje? Lees alles over kosten, benodigde ruimte en waarom huren veel slimmer is dan kopen." />
+  <meta property="og:url" content="https://www.golfpopup.nl/blog/golfsimulator-thuis-huren" />
+  <meta property="og:image" content="https://www.golfpopup.nl/og-image.jpg" />
+  <meta property="og:locale" content="nl_NL" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Golfsimulator Thuis Huren",
+    "description": "Overweegt u een golfsimulator thuis of voor een feestje? Lees alles over kosten, benodigde ruimte en waarom huren veel slimmer is dan kopen.",
+    "datePublished": "10 april 2025",
+    "author": {"@type": "Organization", "name": "GolfPopup.nl"},
+    "publisher": {"@type": "Organization", "name": "GolfPopup.nl", "url": "https://www.golfpopup.nl"},
+    "url": "https://www.golfpopup.nl/blog/golfsimulator-thuis-huren",
+    "image": "https://www.golfpopup.nl/og-image.jpg"
+  }
+  </script>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='12' fill='%231a2e1a'/><text y='.9em' font-size='80' x='10'>&#x26F3;</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --green-deep: #1a2e1a;
+      --green-accent: #4a7c4a;
+      --gold: #c9a84c;
+      --gold-light: #e8c87a;
+      --cream: #f5f0e8;
+      --cream-dark: #ede5d3;
+      --white: #ffffff;
+      --text-mid: #4a4a4a;
+      --text-light: #8a8a8a;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Montserrat', sans-serif; background: var(--cream); color: var(--green-deep); }
+
+    /* NAV */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 48px; height: 72px;
+      background: rgba(26,46,26,0.98);
+      border-bottom: 1px solid rgba(201,168,76,0.2);
+    }
+    .nav-logo { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 600; color: var(--gold); text-decoration: none; }
+    .nav-logo span { color: #fff; font-weight: 300; }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 11px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; transition: color .2s; }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-cta { background: var(--gold) !important; color: var(--green-deep) !important; padding: 8px 20px; border-radius: 2px; font-weight: 700 !important; }
+    .nav-cta:hover { background: var(--gold-light) !important; }
+
+    /* HERO */
+    .blog-hero {
+      background: var(--green-deep);
+      padding: 72px 0 60px;
+      position: relative; overflow: hidden;
+    }
+    .blog-hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        linear-gradient(160deg, rgba(10,20,10,0.80) 0%, rgba(15,25,15,0.65) 100%),
+        url('/hero-bg.jpg') center 30% / cover no-repeat;
+    }
+    .blog-hero-inner { position: relative; max-width: 780px; margin: 0 auto; padding: 0 48px; }
+    .blog-category { display: inline-block; font-size: 10px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
+    .blog-hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(36px, 6vw, 64px); font-weight: 300; color: #fff; line-height: 1.1; margin-bottom: 16px; }
+    .blog-hero h1 em { font-style: italic; color: var(--gold); }
+    .blog-meta { font-size: 12px; color: rgba(255,255,255,0.5); letter-spacing: 1px; }
+
+    /* ARTICLE */
+    article { max-width: 780px; margin: 0 auto; padding: 56px 48px 80px; background: var(--white); }
+    article h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(24px, 4vw, 34px); font-weight: 400; color: var(--green-deep); margin: 40px 0 14px; line-height: 1.2; }
+    article h2 em { font-style: italic; color: var(--green-accent); }
+    article p { font-size: 15px; line-height: 1.9; color: var(--text-mid); margin-bottom: 18px; }
+    article ul { list-style: none; margin: 8px 0 24px; }
+    article ul li { font-size: 14px; color: var(--text-mid); padding: 10px 0; border-bottom: 1px solid var(--cream-dark); display: flex; align-items: flex-start; gap: 12px; line-height: 1.6; }
+    article ul li::before { content: '⛳'; font-size: 13px; flex-shrink: 0; margin-top: 2px; }
+    .back-link { display: inline-flex; align-items: center; gap: 6px; font-size: 11px; color: var(--green-accent); text-decoration: none; font-weight: 600; letter-spacing: 1px; margin-bottom: 40px; padding-bottom: 16px; border-bottom: 1px solid var(--cream-dark); width: 100%; }
+    .back-link:hover { color: var(--green-deep); }
+    .cta-box { margin-top: 56px; padding: 32px; background: var(--cream); border-left: 3px solid var(--gold); }
+    .cta-box h3 { font-family: 'Cormorant Garamond', serif; font-size: 24px; font-weight: 600; color: var(--green-deep); margin-bottom: 10px; }
+    .cta-box p { font-size: 14px; color: var(--text-mid); }
+    .btn-primary { display: inline-block; background: var(--gold); color: var(--green-deep); padding: 14px 36px; text-decoration: none; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; border-radius: 2px; margin-top: 16px; transition: background .2s; }
+    .btn-primary:hover { background: var(--gold-light); }
+
+    /* FOOTER */
+    footer { background: #0f1f0f; padding: 40px 48px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+    .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 600; color: var(--gold); text-decoration: none; }
+    .footer-logo span { color: #fff; font-weight: 300; }
+    .footer-links { display: flex; gap: 24px; list-style: none; }
+    .footer-links a { color: rgba(255,255,255,0.4); text-decoration: none; font-size: 11px; transition: color .2s; }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-copy { font-size: 11px; color: rgba(255,255,255,0.25); }
+
+    @media (max-width: 768px) {
+      nav { padding: 0 20px; }
+      .nav-links li:not(:last-child) { display: none; }
+      .blog-hero-inner { padding: 0 24px; }
+      article { padding: 40px 24px 60px; }
+      footer { padding: 32px 24px; flex-direction: column; align-items: flex-start; }
+    }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="/" class="nav-logo">Golf<span>Popup</span></a>
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="/#reservation" class="nav-cta">Offerte Aanvragen</a></li>
+  </ul>
+</nav>
+
+<div class="blog-hero">
+  <div class="blog-hero-inner">
+    <span class="blog-category">Tips & Tricks &nbsp;&middot;&nbsp; 5 min leestijd</span>
+    <h1>Golfsimulator thuis: <em>dit moet u weten</em></h1>
+    <div class="blog-meta">Gepubliceerd op 10 april 2025 &nbsp;&middot;&nbsp; GolfPopup.nl</div>
+  </div>
+</div>
+
+<article>
+  <a href="/blog/" class="back-link">&#8592; Terug naar alle artikelen</a>
+
+  
+<h2>Golfsimulator huren voor thuis of een feestje?</h2>
+<p>Steeds meer golfers overwegen een golfsimulator voor thuisgebruik, of om tijdelijk te huren voor een feestje of evenement. Maar wat komt er precies bij kijken? En wanneer is huren slimmer dan kopen?</p>
+
+<h2>Wat heeft u nodig voor een <em>golfsimulator</em>?</h2>
+<p>Een complete golfsimulatoropstelling bestaat uit een launch monitor (het brein van de simulator), een beamer, een impact screen en een afslagmat. Daarboven op heeft u voldoende ruimte nodig — minimaal 3&times;4 meter met een plafondshoogte van ten minste 2,8 meter voor een comfortabele swing.</p>
+<p>Bij GolfPopup leveren wij dit alles compleet, inclusief een weersbestendige tent voor gebruik buiten. U hoeft zelf niets te regelen of te kopen.</p>
+
+<h2>Kopen of <em>huren</em>?</h2>
+<p>Een eigen golfsimulator kopen kost al snel tussen de &euro;3.000 en &euro;15.000, afhankelijk van de kwaliteit. Daar komen installatiekosten, onderhoud en de benodigde ruimte nog bij. Huren is voor de meeste mensen de verreweg slimmere keuze:</p>
+<ul>
+  <li>Geen grote investering vooraf</li>
+  <li>Altijd de nieuwste apparatuur</li>
+  <li>Volledige op- en afbouwservice inbegrepen</li>
+  <li>Flexibel in te zetten voor specifieke gelegenheden</li>
+  <li>Geen opslag of onderhoud nodig</li>
+</ul>
+
+<h2>Wat kost een golfsimulator <em>huren</em>?</h2>
+<p>Bij GolfPopup betaalt u een vaste, all-in prijs. Hele dag: &euro;650, twee dagen: &euro;1.100 of een hele week voor &euro;2.500 &mdash; alles inclusief apparatuur, op- en afbouw en technische ondersteuning. De bezorging is gratis binnen 25 km van Otterlo.</p>
+
+<h2>Welke ruimte heeft u <em>nodig</em>?</h2>
+<p>Voor een comfortabele golfsimulatorervaring heeft u minimaal 3 meter breedte, 4 meter diepte en 2,8 meter plafondshoogte nodig. In een grote woonkamer, garage of schuur lukt dat vaak prima. Buiten plaatsen wij een professionele tent, zodat u zich geen zorgen hoeft te maken over het weer.</p>
+<p>Twijfelt u of uw locatie geschikt is? Stuur ons een foto of maattekening en wij adviseren u gratis.</p>
+
+
+  <div class="cta-box">
+    <h3>Klaar om te reserveren?</h3>
+    <p>Vraag een vrijblijvende offerte aan voor uw datum en ontvang binnen 24 uur een reactie.</p>
+    <a href="/" class="btn-primary">Offerte Aanvragen &rarr;</a>
+  </div>
+</article>
+
+<footer>
+  <a href="/" class="footer-logo">Golf<span>Popup</span></a>
+  <ul class="footer-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/blog/">Blog</a></li>
+    <li><a href="mailto:info@golfpopup.nl">info@golfpopup.nl</a></li>
+  </ul>
+  <span class="footer-copy">© 2025 GolfPopup.nl</span>
+</footer>
+
+</body>
+</html>
