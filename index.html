@@ -1329,7 +1329,10 @@
 
     .faq-a.open { display: block; }
 
-    /* ── ANIMATIONS ── */
+    @media (hover: hover) {
+      body { cursor: none; }
+      a, button, input, select, textarea, [onclick] { cursor: none; }
+    }
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
@@ -1402,14 +1405,14 @@
 
 <!-- NAV -->
 <nav id="navbar">
-  <a href="#" class="nav-logo" onclick="showPage('home')">Golf<span>Popup</span></a>
+  <a href="javascript:void(0)" class="nav-logo" onclick="showPage('home')">Golf<span>Popup</span></a>
   <ul class="nav-links">
-    <li><a href="#" onclick="showPage('simulator'); return false;">De Simulator</a></li>
-    <li><a href="#" onclick="showPage('occasions'); return false;">Gelegenheden</a></li>
-    <li><a href="#" onclick="showPage('pricing-page'); return false;">Tarieven</a></li>
-    <li><a href="#" onclick="showPage('blog'); return false;">Blog</a></li>
-    <li><a href="#" onclick="showPage('faq'); return false;">FAQ</a></li>
-    <li><a href="#" class="nav-cta" onclick="goToReservation(); return false;">Offerte Aanvragen</a></li>
+    <li><a href="javascript:void(0)" onclick="showPage('simulator')">De Simulator</a></li>
+    <li><a href="javascript:void(0)" onclick="showPage('occasions')">Gelegenheden</a></li>
+    <li><a href="javascript:void(0)" onclick="showPage('pricing-page')">Tarieven</a></li>
+    <li><a href="javascript:void(0)" onclick="showPage('blog')">Blog</a></li>
+    <li><a href="javascript:void(0)" onclick="showPage('faq')">FAQ</a></li>
+    <li><a href="javascript:void(0)" class="nav-cta" onclick="goToReservation()">Offerte Aanvragen</a></li>
   </ul>
   <div class="hamburger" id="hamburger" onclick="toggleMenu()">
     <span></span><span></span><span></span>
@@ -1418,13 +1421,13 @@
 
 <!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#" onclick="showPage('home'); toggleMenu(); return false;">Home</a>
-  <a href="#" onclick="showPage('simulator'); toggleMenu(); return false;">De Simulator</a>
-  <a href="#" onclick="showPage('occasions'); toggleMenu(); return false;">Gelegenheden</a>
-  <a href="#" onclick="showPage('pricing-page'); toggleMenu(); return false;">Tarieven</a>
-  <a href="#" onclick="showPage('blog'); toggleMenu(); return false;">Blog</a>
-  <a href="#" onclick="showPage('faq'); toggleMenu(); return false;">FAQ</a>
-  <a href="#" onclick="toggleMenu(); goToReservation(); return false;">Offerte Aanvragen</a>
+  <a href="javascript:void(0)" onclick="showPage('home'); toggleMenu()">Home</a>
+  <a href="javascript:void(0)" onclick="showPage('simulator'); toggleMenu()">De Simulator</a>
+  <a href="javascript:void(0)" onclick="showPage('occasions'); toggleMenu()">Gelegenheden</a>
+  <a href="javascript:void(0)" onclick="showPage('pricing-page'); toggleMenu()">Tarieven</a>
+  <a href="javascript:void(0)" onclick="showPage('blog'); toggleMenu()">Blog</a>
+  <a href="javascript:void(0)" onclick="showPage('faq'); toggleMenu()">FAQ</a>
+  <a href="javascript:void(0)" onclick="toggleMenu(); goToReservation()">Offerte Aanvragen</a>
 </div>
 
 <!-- ══════════════════════════ HOME PAGE ══════════════════════════ -->
@@ -1446,7 +1449,7 @@
     </p>
     <div class="hero-buttons">
       <a href="#reservation" class="btn-primary" onclick="document.getElementById('reservation').scrollIntoView({behavior:'smooth'}); return false;">Offerte Aanvragen</a>
-      <a href="#" class="btn-outline" onclick="showPage('simulator'); return false;">Ontdek de Simulator</a>
+      <a href="javascript:void(0)" class="btn-outline" onclick="showPage('simulator')">Ontdek de Simulator</a>
     </div>
   </div>
   <div class="hero-scroll">Scroll</div>
@@ -1838,24 +1841,24 @@
         <div class="section-label">Blog</div>
         <h2 class="section-title">Lees onze <em>laatste artikelen</em></h2>
       </div>
-      <a href="#" onclick="showPage('blog'); return false;" style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--green-accent);text-decoration:none;white-space:nowrap">Alle artikelen →</a>
+      <a href="javascript:void(0)" onclick="showPage('blog')" style="font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--green-accent);text-decoration:none;white-space:nowrap">Alle artikelen →</a>
     </div>
     <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
-      <a href="#" onclick="showPage('blog-golfsimulator-thuis'); return false;" class="reveal" style="text-decoration:none;display:block;border:1px solid var(--cream-dark);transition:all .3s ease" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 12px 40px rgba(26,46,26,0.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+      <a href="javascript:void(0)" onclick="showPage('blog-golfsimulator-thuis')" class="reveal" style="text-decoration:none;display:block;border:1px solid var(--cream-dark);transition:all .3s ease" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 12px 40px rgba(26,46,26,0.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
         <div style="background:var(--green-deep);height:120px;display:flex;align-items:center;justify-content:center;font-size:40px">⛳</div>
         <div style="padding:20px">
           <div style="font-size:9px;color:var(--green-accent);font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px">Tips &amp; Tricks</div>
           <div style="font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:600;color:var(--green-deep);line-height:1.3">Golfsimulator thuis: dit moet u weten</div>
         </div>
       </a>
-      <a href="#" onclick="showPage('blog-teambuilding'); return false;" class="reveal" style="text-decoration:none;display:block;border:1px solid var(--cream-dark);transition:all .3s ease" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 12px 40px rgba(26,46,26,0.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+      <a href="javascript:void(0)" onclick="showPage('blog-teambuilding')" class="reveal" style="text-decoration:none;display:block;border:1px solid var(--cream-dark);transition:all .3s ease" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 12px 40px rgba(26,46,26,0.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
         <div style="background:var(--green-mid);height:120px;display:flex;align-items:center;justify-content:center;font-size:40px">🏢</div>
         <div style="padding:20px">
           <div style="font-size:9px;color:var(--green-accent);font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px">Bedrijfsevenementen</div>
           <div style="font-family:'Cormorant Garamond',serif;font-size:19px;font-weight:600;color:var(--green-deep);line-height:1.3">Waarom golf het perfecte teambuilding-activiteit is</div>
         </div>
       </a>
-      <a href="#" onclick="showPage('blog-garmin-review'); return false;" class="reveal" style="text-decoration:none;display:block;border:1px solid var(--cream-dark);transition:all .3s ease" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 12px 40px rgba(26,46,26,0.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+      <a href="javascript:void(0)" onclick="showPage('blog-garmin-review')" class="reveal" style="text-decoration:none;display:block;border:1px solid var(--cream-dark);transition:all .3s ease" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 12px 40px rgba(26,46,26,0.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
         <div style="background:#1f3a1f;height:120px;display:flex;align-items:center;justify-content:center;font-size:40px">📡</div>
         <div style="padding:20px">
           <div style="font-size:9px;color:var(--green-accent);font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:8px">Technologie</div>
@@ -1877,37 +1880,37 @@
       <h2 class="section-title" style="margin-top:8px">Alles over <em>golfsimulators</em><br />huren</h2>
     </div>
     <div class="seo-grid">
-      <a class="seo-card reveal" href="#" onclick="showPage('golfsimulator-huren'); return false;">
+      <a class="seo-card reveal" href="javascript:void(0)" onclick="showPage('golfsimulator-huren')">
         <span class="seo-card-icon">⛳</span>
         <div class="seo-card-title">Golfsimulator Huren</div>
         <p class="seo-card-desc">Alles wat u moet weten over het huren van een mobiele golfsimulator voor uw evenement. Inclusief FAQ en praktische informatie.</p>
         <span class="seo-card-link">Lees meer →</span>
       </a>
-      <a class="seo-card reveal" href="#" onclick="showPage('golfsimulator-evenement'); return false;">
+      <a class="seo-card reveal" href="javascript:void(0)" onclick="showPage('golfsimulator-evenement')">
         <span class="seo-card-icon">🎉</span>
         <div class="seo-card-title">Golfsimulator voor Evenementen</div>
         <p class="seo-card-desc">Waarom een golfsimulator de perfecte toevoeging is aan elk evenement. Van bruiloften tot bedrijfsdagen.</p>
         <span class="seo-card-link">Lees meer →</span>
       </a>
-      <a class="seo-card reveal" href="#" onclick="showPage('garmin-r50'); return false;">
+      <a class="seo-card reveal" href="javascript:void(0)" onclick="showPage('garmin-r50')">
         <span class="seo-card-icon">📡</span>
         <div class="seo-card-title">Garmin Approach R50</div>
         <p class="seo-card-desc">Alles over de Garmin Approach R50 launch monitor die wij gebruiken. Nauwkeurige slaganalyse en 50+ wereldberoemde banen.</p>
         <span class="seo-card-link">Lees meer →</span>
       </a>
-      <a class="seo-card reveal" href="#" onclick="showPage('gelderland'); return false;">
+      <a class="seo-card reveal" href="javascript:void(0)" onclick="showPage('gelderland')">
         <span class="seo-card-icon">📍</span>
         <div class="seo-card-title">Golfsimulator Gelderland</div>
         <p class="seo-card-desc">Bent u op zoek naar een golfsimulator in Gelderland? GolfPopup rijdt door de hele provincie en heel Oost-Nederland.</p>
         <span class="seo-card-link">Lees meer →</span>
       </a>
-      <a class="seo-card reveal" href="#" onclick="showPage('bedrijfsdag'); return false;">
+      <a class="seo-card reveal" href="javascript:void(0)" onclick="showPage('bedrijfsdag')">
         <span class="seo-card-icon">🏢</span>
         <div class="seo-card-title">Golfsimulator Bedrijfsdag</div>
         <p class="seo-card-desc">Maak uw bedrijfsdag onvergetelijk met een professionele golfsimulator. Teambuilding op een unieke manier.</p>
         <span class="seo-card-link">Lees meer →</span>
       </a>
-      <a class="seo-card reveal" href="#" onclick="showPage('faq'); return false;">
+      <a class="seo-card reveal" href="javascript:void(0)" onclick="showPage('faq')">
         <span class="seo-card-icon">❓</span>
         <div class="seo-card-title">Veelgestelde Vragen</div>
         <p class="seo-card-desc">Antwoorden op de meest gestelde vragen over het huren van onze golfsimulator, levering en gebruik.</p>
@@ -1958,7 +1961,7 @@
             <li>Verlengsnoer & stroomvoorziening</li>
           </ul>
           <p style="margin-top:24px">De volledige opstelling vergt circa 2×3 meter vloeroppervlak en past in vrijwel elke ruimte of tuin. Buiten plaatsen wij een professionele tent voor wind- en regenbestendigheid.</p>
-          <a href="#reservation" onclick="showPage('home'); setTimeout(() => document.getElementById('reservation').scrollIntoView({behavior:'smooth'}), 100); return false;" class="btn-primary" style="margin-top:24px;display:inline-block">Offerte Aanvragen</a>
+          <a href="#reservation" onclick="goToReservation()" class="btn-primary" style="margin-top:24px;display:inline-block">Offerte Aanvragen</a>
         </div>
       </div>
     </div>
@@ -2021,7 +2024,7 @@
         <li>Maatwerk mogelijk voor langere periodes of meerdere locaties</li>
       </ul>
       <p>Heeft u een speciale wens, zoals een combinatie met een aangrenzend weekend of een meerdaags festival? Neem contact op voor een offerte op maat.</p>
-      <a href="#" onclick="showPage('home'); setTimeout(() => document.getElementById('reservation').scrollIntoView({behavior:'smooth'}), 100); return false;" class="btn-primary" style="margin-top:24px;display:inline-block">Vraag Offerte Aan</a>
+      <a href="javascript:void(0)" onclick="goToReservation()" class="btn-primary" style="margin-top:24px;display:inline-block">Vraag Offerte Aan</a>
     </div>
   </div>
 </div>
@@ -2102,7 +2105,7 @@
       </ul>
       <h2 style="margin-top:40px">Prijzen golfsimulator <em>huren</em></h2>
       <p><strong>Hele dag:</strong> €650 | <strong>2 Dagen:</strong> €1.100 | <strong>Hele week:</strong> €2.500 (alle prijzen excl. BTW)</p>
-      <a href="#" onclick="showPage('home'); setTimeout(() => document.getElementById('reservation').scrollIntoView({behavior:'smooth'}), 100); return false;" class="btn-primary" style="margin-top:24px;display:inline-block">Direct Aanvragen</a>
+      <a href="javascript:void(0)" onclick="goToReservation()" class="btn-primary" style="margin-top:24px;display:inline-block">Direct Aanvragen</a>
     </div>
   </div>
 </div>
@@ -2130,7 +2133,7 @@
           <p>Verbind collega's en klanten met een ontspannen maar competitieve golfervaring. Inclusief leaderboard voor de echte competitiegeest.</p>
         </div>
       </div>
-      <a href="#" onclick="showPage('home'); setTimeout(() => document.getElementById('reservation').scrollIntoView({behavior:'smooth'}), 100); return false;" class="btn-primary" style="margin-top:40px;display:inline-block">Vraag Offerte Aan</a>
+      <a href="javascript:void(0)" onclick="goToReservation()" class="btn-primary" style="margin-top:40px;display:inline-block">Vraag Offerte Aan</a>
     </div>
   </div>
 </div>
@@ -2160,7 +2163,7 @@
         <li>Practice range met directe feedback</li>
       </ul>
       <p style="margin-top:24px">De simulator is eenvoudig te bedienen voor beginners, maar biedt genoeg diepgang voor ervaren golfers die hun slag willen verbeteren. Een unieke combinatie van entertainment en technologie.</p>
-      <a href="#" onclick="showPage('home'); setTimeout(() => document.getElementById('reservation').scrollIntoView({behavior:'smooth'}), 100); return false;" class="btn-primary" style="margin-top:24px;display:inline-block">Huur Nu de R50</a>
+      <a href="javascript:void(0)" onclick="goToReservation()" class="btn-primary" style="margin-top:24px;display:inline-block">Huur Nu de R50</a>
     </div>
   </div>
 </div>
@@ -2189,7 +2192,7 @@
         <li>Amersfoort, Utrecht, Deventer — op aanvraag</li>
       </ul>
       <p style="margin-top:24px">Staat uw stad er niet bij? Geen probleem — wij rijden door heel Nederland. Neem contact op voor een offerte inclusief reiskosten.</p>
-      <a href="#" onclick="showPage('home'); setTimeout(() => document.getElementById('reservation').scrollIntoView({behavior:'smooth'}), 100); return false;" class="btn-primary" style="margin-top:24px;display:inline-block">Controleer Uw Locatie</a>
+      <a href="javascript:void(0)" onclick="goToReservation()" class="btn-primary" style="margin-top:24px;display:inline-block">Controleer Uw Locatie</a>
     </div>
   </div>
 </div>
@@ -2217,7 +2220,7 @@
         <li>Open dagen en showroomevenementen</li>
       </ul>
       <p style="margin-top:24px">Vraag een vrijblijvende offerte aan en ontvang binnen 24 uur een voorstel op maat.</p>
-      <a href="#" onclick="showPage('home'); setTimeout(() => document.getElementById('reservation').scrollIntoView({behavior:'smooth'}), 100); return false;" class="btn-primary" style="margin-top:24px;display:inline-block">Vraag Offerte Aan</a>
+      <a href="javascript:void(0)" onclick="goToReservation()" class="btn-primary" style="margin-top:24px;display:inline-block">Vraag Offerte Aan</a>
     </div>
   </div>
 </div>
@@ -2236,7 +2239,7 @@
       <p>Lees onze blogartikelen over golfsimulators, evenementen en goltips voor beginners en gevorderden.</p>
       <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:28px;margin-top:40px">
 
-        <a href="#" onclick="showPage('blog-golfsimulator-thuis'); return false;" style="text-decoration:none;display:block;border:1px solid var(--cream-dark);padding:0 0 28px 0;transition:all .3s ease" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 12px 40px rgba(26,46,26,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+        <a href="javascript:void(0)" onclick="showPage('blog-golfsimulator-thuis')" style="text-decoration:none;display:block;border:1px solid var(--cream-dark);padding:0 0 28px 0;transition:all .3s ease" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 12px 40px rgba(26,46,26,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
           <div style="background:var(--green-deep);height:160px;display:flex;align-items:center;justify-content:center;font-size:52px">⛳</div>
           <div style="padding:24px 24px 0">
             <div style="font-size:10px;color:var(--green-accent);font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px">Tips & Tricks</div>
@@ -2246,7 +2249,7 @@
           </div>
         </a>
 
-        <a href="#" onclick="showPage('blog-beste-golfbanen'); return false;" style="text-decoration:none;display:block;border:1px solid var(--cream-dark);padding:0 0 28px 0;transition:all .3s ease" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 12px 40px rgba(26,46,26,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+        <a href="javascript:void(0)" onclick="showPage('blog-beste-golfbanen')" style="text-decoration:none;display:block;border:1px solid var(--cream-dark);padding:0 0 28px 0;transition:all .3s ease" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 12px 40px rgba(26,46,26,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
           <div style="background:var(--green-mid);height:160px;display:flex;align-items:center;justify-content:center;font-size:52px">🌍</div>
           <div style="padding:24px 24px 0">
             <div style="font-size:10px;color:var(--green-accent);font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px">Banen & Locaties</div>
@@ -2256,7 +2259,7 @@
           </div>
         </a>
 
-        <a href="#" onclick="showPage('blog-teambuilding'); return false;" style="text-decoration:none;display:block;border:1px solid var(--cream-dark);padding:0 0 28px 0;transition:all .3s ease" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 12px 40px rgba(26,46,26,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+        <a href="javascript:void(0)" onclick="showPage('blog-teambuilding')" style="text-decoration:none;display:block;border:1px solid var(--cream-dark);padding:0 0 28px 0;transition:all .3s ease" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 12px 40px rgba(26,46,26,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
           <div style="background:#1f3a1f;height:160px;display:flex;align-items:center;justify-content:center;font-size:52px">🏢</div>
           <div style="padding:24px 24px 0">
             <div style="font-size:10px;color:var(--green-accent);font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px">Bedrijfsevenementen</div>
@@ -2266,7 +2269,7 @@
           </div>
         </a>
 
-        <a href="#" onclick="showPage('blog-bruiloft'); return false;" style="text-decoration:none;display:block;border:1px solid var(--cream-dark);padding:0 0 28px 0;transition:all .3s ease" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 12px 40px rgba(26,46,26,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+        <a href="javascript:void(0)" onclick="showPage('blog-bruiloft')" style="text-decoration:none;display:block;border:1px solid var(--cream-dark);padding:0 0 28px 0;transition:all .3s ease" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 12px 40px rgba(26,46,26,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
           <div style="background:var(--green-deep);height:160px;display:flex;align-items:center;justify-content:center;font-size:52px">💍</div>
           <div style="padding:24px 24px 0">
             <div style="font-size:10px;color:var(--green-accent);font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px">Bruiloften</div>
@@ -2276,7 +2279,7 @@
           </div>
         </a>
 
-        <a href="#" onclick="showPage('blog-garmin-review'); return false;" style="text-decoration:none;display:block;border:1px solid var(--cream-dark);padding:0 0 28px 0;transition:all .3s ease" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 12px 40px rgba(26,46,26,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
+        <a href="javascript:void(0)" onclick="showPage('blog-garmin-review')" style="text-decoration:none;display:block;border:1px solid var(--cream-dark);padding:0 0 28px 0;transition:all .3s ease" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 12px 40px rgba(26,46,26,0.1)'" onmouseout="this.style.transform='';this.style.boxShadow=''">
           <div style="background:var(--green-mid);height:160px;display:flex;align-items:center;justify-content:center;font-size:52px">📡</div>
           <div style="padding:24px 24px 0">
             <div style="font-size:10px;color:var(--green-accent);font-weight:700;letter-spacing:2px;text-transform:uppercase;margin-bottom:10px">Technologie</div>
@@ -2302,7 +2305,7 @@
   <div class="page-content">
     <div class="container" style="max-width:780px">
       <div style="font-size:11px;color:var(--text-light);letter-spacing:1px;margin-bottom:32px">
-        Gepubliceerd op 10 april 2025 &nbsp;·&nbsp; <a href="#" onclick="showPage('blog'); return false;" style="color:var(--green-accent);text-decoration:none">← Terug naar blog</a>
+        Gepubliceerd op 10 april 2025 &nbsp;·&nbsp; <a href="javascript:void(0)" onclick="showPage('blog')" style="color:var(--green-accent);text-decoration:none">← Terug naar blog</a>
       </div>
       <h2>Golfsimulator thuis of huren: <em>dit moet u weten</em></h2>
       <p>Steeds meer golfers overwegen een golfsimulator voor thuisgebruik, of om tijdelijk te huren voor een feestje of evenement. Maar wat komt er precies bij kijken? En wanneer is huren slimmer dan kopen?</p>
@@ -2328,7 +2331,7 @@
       <div style="margin-top:48px;padding:32px;background:var(--cream);border-left:3px solid var(--gold)">
         <p style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--green-deep);margin-bottom:12px">Klaar om te reserveren?</p>
         <p style="font-size:14px;color:var(--text-mid)">Vraag een vrijblijvende offerte aan voor uw datum en ontvang binnen 24 uur een reactie.</p>
-        <a href="#" onclick="goToReservation(); return false;" class="btn-primary" style="margin-top:16px;display:inline-block">Offerte Aanvragen</a>
+        <a href="javascript:void(0)" onclick="goToReservation()" class="btn-primary" style="margin-top:16px;display:inline-block">Offerte Aanvragen</a>
       </div>
     </div>
   </div>
@@ -2345,7 +2348,7 @@
   <div class="page-content">
     <div class="container" style="max-width:780px">
       <div style="font-size:11px;color:var(--text-light);letter-spacing:1px;margin-bottom:32px">
-        Gepubliceerd op 1 april 2025 &nbsp;·&nbsp; <a href="#" onclick="showPage('blog'); return false;" style="color:var(--green-accent);text-decoration:none">← Terug naar blog</a>
+        Gepubliceerd op 1 april 2025 &nbsp;·&nbsp; <a href="javascript:void(0)" onclick="showPage('blog')" style="color:var(--green-accent);text-decoration:none">← Terug naar blog</a>
       </div>
       <h2>De 5 mooiste golfbanen om te spelen<br /><em>op onze simulator</em></h2>
       <p>Met de Garmin Approach R50 kunt u op meer dan 50 wereldberoemde golfbanen spelen — zonder vliegticket of green fee. Wij zetten onze vijf favorieten op een rij die uw gasten keer op keer terugkomen.</p>
@@ -2368,7 +2371,7 @@
       <div style="margin-top:48px;padding:32px;background:var(--cream);border-left:3px solid var(--gold)">
         <p style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--green-deep);margin-bottom:12px">Wil u deze banen zelf spelen?</p>
         <p style="font-size:14px;color:var(--text-mid)">Huur onze golfsimulator en speel op al deze iconische banen op uw eigen locatie.</p>
-        <a href="#" onclick="goToReservation(); return false;" class="btn-primary" style="margin-top:16px;display:inline-block">Offerte Aanvragen</a>
+        <a href="javascript:void(0)" onclick="goToReservation()" class="btn-primary" style="margin-top:16px;display:inline-block">Offerte Aanvragen</a>
       </div>
     </div>
   </div>
@@ -2385,7 +2388,7 @@
   <div class="page-content">
     <div class="container" style="max-width:780px">
       <div style="font-size:11px;color:var(--text-light);letter-spacing:1px;margin-bottom:32px">
-        Gepubliceerd op 22 maart 2025 &nbsp;·&nbsp; <a href="#" onclick="showPage('blog'); return false;" style="color:var(--green-accent);text-decoration:none">← Terug naar blog</a>
+        Gepubliceerd op 22 maart 2025 &nbsp;·&nbsp; <a href="javascript:void(0)" onclick="showPage('blog')" style="color:var(--green-accent);text-decoration:none">← Terug naar blog</a>
       </div>
       <h2>Waarom golf het perfecte<br /><em>teambuilding-activiteit</em> is</h2>
       <p>Teambuilding-activiteiten zijn er in alle soorten en maten. Van escape rooms tot kooklessen, van paintball tot zeilen. Maar een golfsimulator heeft eigenschappen die hem uniek maken — en bijzonder geschikt voor bedrijfsevenementen.</p>
@@ -2413,7 +2416,7 @@
       <div style="margin-top:48px;padding:32px;background:var(--cream);border-left:3px solid var(--gold)">
         <p style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--green-deep);margin-bottom:12px">Plan uw bedrijfsevenement</p>
         <p style="font-size:14px;color:var(--text-mid)">Neem contact op voor een op maat gemaakte offerte voor uw teambuilding-dag.</p>
-        <a href="#" onclick="goToReservation(); return false;" class="btn-primary" style="margin-top:16px;display:inline-block">Offerte Aanvragen</a>
+        <a href="javascript:void(0)" onclick="goToReservation()" class="btn-primary" style="margin-top:16px;display:inline-block">Offerte Aanvragen</a>
       </div>
     </div>
   </div>
@@ -2430,7 +2433,7 @@
   <div class="page-content">
     <div class="container" style="max-width:780px">
       <div style="font-size:11px;color:var(--text-light);letter-spacing:1px;margin-bottom:32px">
-        Gepubliceerd op 14 maart 2025 &nbsp;·&nbsp; <a href="#" onclick="showPage('blog'); return false;" style="color:var(--green-accent);text-decoration:none">← Terug naar blog</a>
+        Gepubliceerd op 14 maart 2025 &nbsp;·&nbsp; <a href="javascript:void(0)" onclick="showPage('blog')" style="color:var(--green-accent);text-decoration:none">← Terug naar blog</a>
       </div>
       <h2>Golfsimulator op uw bruiloft:<br /><em>een origineel en praktisch idee</em></h2>
       <p>Uw trouwdag is de dag die u uw hele leven zult onthouden. En uw gasten ook. Een golfsimulator op de receptie of het feest zorgt voor een unieke entertainmentoptie die alle generaties aanspreekt — van de kleuters van uw neefje tot uw opa van 82.</p>
@@ -2452,7 +2455,7 @@
       <div style="margin-top:48px;padding:32px;background:var(--cream);border-left:3px solid var(--gold)">
         <p style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--green-deep);margin-bottom:12px">Uw trouwdag extra bijzonder maken?</p>
         <p style="font-size:14px;color:var(--text-mid)">Vraag een vrijblijvende offerte aan voor uw datum. Vroeg boeken = beschikbaarheid gegarandeerd.</p>
-        <a href="#" onclick="goToReservation(); return false;" class="btn-primary" style="margin-top:16px;display:inline-block">Offerte Aanvragen</a>
+        <a href="javascript:void(0)" onclick="goToReservation()" class="btn-primary" style="margin-top:16px;display:inline-block">Offerte Aanvragen</a>
       </div>
     </div>
   </div>
@@ -2469,7 +2472,7 @@
   <div class="page-content">
     <div class="container" style="max-width:780px">
       <div style="font-size:11px;color:var(--text-light);letter-spacing:1px;margin-bottom:32px">
-        Gepubliceerd op 5 maart 2025 &nbsp;·&nbsp; <a href="#" onclick="showPage('blog'); return false;" style="color:var(--green-accent);text-decoration:none">← Terug naar blog</a>
+        Gepubliceerd op 5 maart 2025 &nbsp;·&nbsp; <a href="javascript:void(0)" onclick="showPage('blog')" style="color:var(--green-accent);text-decoration:none">← Terug naar blog</a>
       </div>
       <h2>Garmin Approach R50 review:<br /><em>nauwkeurig, toegankelijk en compleet</em></h2>
       <p>De Garmin Approach R50 is de launch monitor die wij gebruiken voor al onze verhuur. Wij kozen hem bewust — niet alleen vanwege de nauwkeurigheid, maar ook vanwege de toegankelijkheid voor gebruikers zonder golfervaring. In deze review leggen wij uit waarom.</p>
@@ -2502,7 +2505,7 @@
       <div style="margin-top:48px;padding:32px;background:var(--cream);border-left:3px solid var(--gold)">
         <p style="font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:600;color:var(--green-deep);margin-bottom:12px">Zelf de R50 ervaren?</p>
         <p style="font-size:14px;color:var(--text-mid)">Huur onze simulator met de Garmin R50 voor uw evenement en laat uw gasten zelf beoordelen.</p>
-        <a href="#" onclick="goToReservation(); return false;" class="btn-primary" style="margin-top:16px;display:inline-block">Offerte Aanvragen</a>
+        <a href="javascript:void(0)" onclick="goToReservation()" class="btn-primary" style="margin-top:16px;display:inline-block">Offerte Aanvragen</a>
       </div>
     </div>
   </div>
@@ -2514,25 +2517,25 @@
   <div class="container">
     <div class="footer-inner">
       <div>
-        <a href="#" class="footer-logo" onclick="showPage('home')">Golf<span>Popup</span></a>
+        <a href="javascript:void(0)" class="footer-logo" onclick="showPage('home')">Golf<span>Popup</span></a>
         <p class="footer-tagline">Professionele mobiele golfsimulator voor uw evenement. Wij bouwen op en af — u geniet.</p>
       </div>
       <div>
         <div class="footer-heading">Navigatie</div>
         <ul class="footer-links">
-          <li><a href="#" onclick="showPage('home')">Home</a></li>
-          <li><a href="#" onclick="showPage('simulator')">De Simulator</a></li>
-          <li><a href="#" onclick="showPage('occasions')">Gelegenheden</a></li>
-          <li><a href="#" onclick="showPage('blog')">Blog</a></li>
-          <li><a href="#" onclick="showPage('faq')">FAQ</a></li>
+          <li><a href="javascript:void(0)" onclick="showPage('home')">Home</a></li>
+          <li><a href="javascript:void(0)" onclick="showPage('simulator')">De Simulator</a></li>
+          <li><a href="javascript:void(0)" onclick="showPage('occasions')">Gelegenheden</a></li>
+          <li><a href="javascript:void(0)" onclick="showPage('blog')">Blog</a></li>
+          <li><a href="javascript:void(0)" onclick="showPage('faq')">FAQ</a></li>
         </ul>
       </div>
       <div>
         <div class="footer-heading">Tarieven</div>
         <ul class="footer-links">
-          <li><a href="#" onclick="goToReservation(); return false;">Hele dag – €650</a></li>
-          <li><a href="#" onclick="goToReservation(); return false;">2 Dagen – €1.100</a></li>
-          <li><a href="#" onclick="goToReservation(); return false;">Hele week – €2.500</a></li>
+          <li><a href="javascript:void(0)" onclick="goToReservation()">Hele dag – €650</a></li>
+          <li><a href="javascript:void(0)" onclick="goToReservation()">2 Dagen – €1.100</a></li>
+          <li><a href="javascript:void(0)" onclick="goToReservation()">Hele week – €2.500</a></li>
         </ul>
       </div>
       <div>
@@ -2540,16 +2543,16 @@
         <ul class="footer-links">
           <li><a href="mailto:info@golfpopup.nl">info@golfpopup.nl</a></li>
           <li><a href="https://maps.google.com/?q=Otterlo,+Gelderland" target="_blank" rel="noopener">Otterlo, Gelderland</a></li>
-          <li><a href="#" onclick="goToReservation(); return false;">Offerte aanvragen →</a></li>
+          <li><a href="javascript:void(0)" onclick="goToReservation()">Offerte aanvragen →</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
       <span class="footer-copy">© <span id="year"></span> GolfPopup.nl — Alle rechten voorbehouden</span>
       <span class="footer-copy" style="display:flex;gap:16px;flex-wrap:wrap">
-        <a href="#" onclick="showPage('faq'); return false;" style="color:rgba(255,255,255,0.3);text-decoration:none">FAQ</a>
+        <a href="javascript:void(0)" onclick="showPage('faq')" style="color:rgba(255,255,255,0.3);text-decoration:none">FAQ</a>
         <a href="mailto:info@golfpopup.nl" style="color:rgba(255,255,255,0.3);text-decoration:none">Contact</a>
-        <a href="#" onclick="showPage('blog'); return false;" style="color:rgba(255,255,255,0.3);text-decoration:none">Blog</a>
+        <a href="javascript:void(0)" onclick="showPage('blog')" style="color:rgba(255,255,255,0.3);text-decoration:none">Blog</a>
         <span>KvK: [invullen] | BTW: NL[invullen]B01</span>
       </span>
     </div>
@@ -2694,6 +2697,107 @@
     const today = new Date().toISOString().split('T')[0];
     dateInput.min = today;
   }
+  // ── CUSTOM CURSOR: GOLFCLUB + ROLLENDE BAL ──
+  (function() {
+    // Alleen op non-touch devices
+    if (window.matchMedia('(hover: none)').matches) return;
+
+    // Verberg standaard cursor
+    document.documentElement.style.cursor = 'none';
+
+    // Maak cursor-elementen
+    const club = document.createElement('div');
+    club.id = 'cursor-club';
+    club.innerHTML = `<svg width="36" height="36" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" style="display:block">
+      <!-- Golfclub shaft -->
+      <line x1="28" y1="2" x2="6" y2="30" stroke="#c9a84c" stroke-width="2.5" stroke-linecap="round"/>
+      <!-- Club head -->
+      <rect x="2" y="27" width="10" height="6" rx="2" fill="#c9a84c" transform="rotate(-35 7 30)"/>
+      <!-- Grip -->
+      <line x1="26" y1="3" x2="30" y2="1" stroke="#ffffff" stroke-width="3" stroke-linecap="round" opacity="0.7"/>
+    </svg>`;
+    club.style.cssText = `
+      position: fixed;
+      top: 0; left: 0;
+      pointer-events: none;
+      z-index: 99999;
+      transform: translate(-4px, -4px);
+      transition: transform 0.05s linear;
+      will-change: transform;
+    `;
+
+    // Bal container — meerdere ballen als trail
+    const TRAIL_LENGTH = 8;
+    const balls = [];
+    for (let i = 0; i < TRAIL_LENGTH; i++) {
+      const b = document.createElement('div');
+      const size = Math.round(10 - i * 0.8);
+      const opacity = 1 - (i / TRAIL_LENGTH) * 0.85;
+      b.style.cssText = `
+        position: fixed;
+        top: 0; left: 0;
+        width: ${size}px; height: ${size}px;
+        border-radius: 50%;
+        background: white;
+        box-shadow: inset -1px -1px 2px rgba(0,0,0,0.25), 0 1px 3px rgba(0,0,0,0.3);
+        pointer-events: none;
+        z-index: 99998;
+        opacity: ${opacity};
+        transform: translate(-50%, -50%);
+        will-change: transform;
+      `;
+      balls.push(b);
+      document.body.appendChild(b);
+    }
+    document.body.appendChild(club);
+
+    // Cursor tracking
+    let mouseX = -100, mouseY = -100;
+    const positions = Array(TRAIL_LENGTH).fill({ x: -100, y: -100 });
+
+    document.addEventListener('mousemove', (e) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+    });
+
+    // Cursor verdwijnen bij hover op links/buttons
+    document.addEventListener('mouseover', (e) => {
+      if (e.target.closest('a, button, input, select, textarea, label, [onclick]')) {
+        club.style.opacity = '0.6';
+      }
+    });
+    document.addEventListener('mouseout', (e) => {
+      if (e.target.closest('a, button, input, select, textarea, label, [onclick]')) {
+        club.style.opacity = '1';
+      }
+    });
+
+    // Animatielus
+    let frame = 0;
+    function animate() {
+      // Verschuif posities
+      positions.unshift({ x: mouseX, y: mouseY });
+      positions.pop();
+
+      // Club volgt cursor direct
+      club.style.left = mouseX + 'px';
+      club.style.top = mouseY + 'px';
+
+      // Ballen volgen met vertraging
+      balls.forEach((ball, i) => {
+        const pos = positions[Math.min(i * 2, positions.length - 1)];
+        // Kleine rotatie simulatie
+        const wobble = Math.sin(frame * 0.15 + i * 0.8) * 1.5;
+        ball.style.left = (pos.x + wobble) + 'px';
+        ball.style.top = pos.y + 'px';
+      });
+
+      frame++;
+      requestAnimationFrame(animate);
+    }
+    animate();
+  })();
+
 </script>
 </body>
 </html>
