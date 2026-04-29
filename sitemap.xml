@@ -83,6 +83,13 @@
     <priority>0.7</priority>
   </url>
 
+  <url>
+    <loc>https://www.golfpopup.nl/blog/golfsimulator-huren/</loc>
+    <lastmod>2025-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <!-- Blogposts -->
   <url>
     <loc>https://www.golfpopup.nl/blog/golfsimulator-thuis-huren</loc>
