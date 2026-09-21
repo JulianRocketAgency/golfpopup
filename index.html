@@ -2705,14 +2705,14 @@
     }
   });
 
-  // ── SET MIN DATE ON FORM: vanaf 1 augustus ──
+  // ── SET MIN DATE ON FORM: vanaf 1 november ──
   const dateInput = document.querySelector('input[type="date"]');
   if (dateInput) {
-    dateInput.min = '2025-08-01';
+    dateInput.min = '2026-11-01';
     dateInput.value = '';
   }
 
-  // ── POPUP: Weer boekbaar vanaf 1 augustus ──
+  // ── POPUP: Weer boekbaar vanaf 1 november ──
   (function() {
     // Niet tonen als al gesloten in deze sessie
     if (sessionStorage.getItem('popupClosed')) return;
@@ -2748,10 +2748,10 @@
         <!-- Content -->
         <div style="padding: 40px 40px 36px">
           <div style="font-family:'Cormorant Garamond',serif; font-size:36px; font-weight:300; color:#ffffff; line-height:1.15; margin-bottom:16px">
-            Vanwege hoge animo<br><em style="color:#c9a84c; font-style:italic">weer boekbaar</em><br>vanaf 1 augustus
+            Vanwege hoge animo<br><em style="color:#c9a84c; font-style:italic">weer boekbaar</em><br>vanaf 1 november
           </div>
           <p style="font-family:'Montserrat',sans-serif; font-size:13px; color:rgba(255,255,255,0.6); line-height:1.8; margin-bottom:28px">
-            Door de overweldigende interesse is onze agenda tot en met juli volledig volgeboekt. Vanaf <strong style="color:rgba(255,255,255,0.9)">1 augustus 2025</strong> zijn er weer datums beschikbaar. U kunt alvast een reserveringsaanvraag indienen.
+            Door de overweldigende interesse is onze agenda tot en met oktober volledig volgeboekt. Vanaf <strong style="color:rgba(255,255,255,0.9)">1 november 2026</strong> zijn er weer datums beschikbaar. U kunt alvast een reserveringsaanvraag indienen.
           </p>
 
           <!-- Datum badge -->
@@ -2759,7 +2759,7 @@
             <span style="font-size:22px">📅</span>
             <div>
               <div style="font-family:'Montserrat',sans-serif; font-size:9px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:rgba(201,168,76,0.7); margin-bottom:2px">Eerste beschikbare datum</div>
-              <div style="font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:500; color:#c9a84c">1 augustus 2025</div>
+              <div style="font-family:'Cormorant Garamond',serif; font-size:22px; font-weight:500; color:#c9a84c">1 november 2026</div>
             </div>
           </div>
 
